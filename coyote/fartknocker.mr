@@ -1,6 +1,6 @@
 // Engine Sim V0.1.14A
 // F150 Coyote (based on the Ford Modular Coyote)
-// push test 1
+// push test 3
 //
 
 import "engine_sim.mr"
@@ -17,18 +17,18 @@ label cycle(2 * 360 * units.deg)
 public node ford_modular_coyote_distributor {
     input wires;
     input timing_curve;
-    input rev_limit: 7250 * units.rpm;
+    input rev_limit: 11250 * units.rpm;
 	input limiter_duration: 0.08;
     alias output __out:
         ignition_module(timing_curve: timing_curve, rev_limit: rev_limit, limiter_duration: limiter_duration)
             .connect_wire(wires.wire1, (0.0 / 8.0) * cycle)
-            .connect_wire(wires.wire5, (1.0 / 8.0) * cycle)
-            .connect_wire(wires.wire4, (2.0 / 8.0) * cycle)
-            .connect_wire(wires.wire8, (3.0 / 8.0) * cycle)
-            .connect_wire(wires.wire6, (4.0 / 8.0) * cycle)
-            .connect_wire(wires.wire3, (5.0 / 8.0) * cycle)
-            .connect_wire(wires.wire7, (6.0 / 8.0) * cycle)
-            .connect_wire(wires.wire2, (7.0 / 8.0) * cycle);
+            .connect_wire(wires.wire2, (1.0 / 8.0) * cycle)
+            .connect_wire(wires.wire8, (2.0 / 8.0) * cycle)
+            .connect_wire(wires.wire7, (3.0 / 8.0) * cycle)
+            .connect_wire(wires.wire3, (4.0 / 8.0) * cycle)
+            .connect_wire(wires.wire6, (5.0 / 8.0) * cycle)
+            .connect_wire(wires.wire4, (6.0 / 8.0) * cycle)
+            .connect_wire(wires.wire5, (7.0 / 8.0) * cycle);
 }
 
 private node wires {
@@ -205,7 +205,7 @@ public node ModCoyote {
 
 	// https://performanceparts.ford.com/download/PDFS/Coyote%20Technical%20Reference2.pdf
     // modified for a gen3 f150 
-    label bore(92.96 * units.mm)
+    label bore(112.96 * units.mm)
     label stroke(92.7 * units.mm)
     label rod_length(150.7 * units.mm)
     label rod_mass(618 * units.g)
