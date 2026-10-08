@@ -5,6 +5,10 @@ FILE ?= .
 
 caught:
 	@echo caught
+	@echo options are,
+	@echo make init
+	@ echo make push # push to server
+	@echo make pull # pull from server
 
 # Run once to create and switch to the dev branch
 init:
