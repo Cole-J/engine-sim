@@ -1,5 +1,5 @@
 # Change this to the file or path to add, e.g. FILE=src/app.py
-FILE ?= makefile coyote/2019_f150_coyote.mr coyote/Ford_Modular_Coyote.mr
+FILE ?= makefile coyote/2019_f150_coyote.mr coyote/Ford_Modular_Coyote.mr coyote/fartknocker.mr
 
 .PHONY: init push pull caught
 
