@@ -1,5 +1,5 @@
 # Change this to the file or path to add, e.g. FILE=src/app.py
-FILE ?= .
+FILE ?= makefile coyote/2019_f150_coyote.mr coyote/Ford_Modular_Coyote.mr
 
 .PHONY: init push pull caught
 
@@ -7,8 +7,8 @@ caught:
 	@echo caught
 	@echo options are,
 	@echo make init
-	@ echo make push # push to server
-	@echo make pull # pull from server
+	@ echo make push \| push code to server
+	@echo make pull \| pull code from server
 
 # Run once to create and switch to the dev branch
 init:
