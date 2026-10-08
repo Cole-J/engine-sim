@@ -22,13 +22,13 @@ public node ford_modular_coyote_distributor {
     alias output __out:
         ignition_module(timing_curve: timing_curve, rev_limit: rev_limit, limiter_duration: limiter_duration)
             .connect_wire(wires.wire1, (0.0 / 8.0) * cycle)
-            .connect_wire(wires.wire2, (1.0 / 8.0) * cycle)
-            .connect_wire(wires.wire8, (2.0 / 8.0) * cycle)
-            .connect_wire(wires.wire7, (3.0 / 8.0) * cycle)
-            .connect_wire(wires.wire3, (4.0 / 8.0) * cycle)
-            .connect_wire(wires.wire6, (5.0 / 8.0) * cycle)
-            .connect_wire(wires.wire4, (6.0 / 8.0) * cycle)
-            .connect_wire(wires.wire5, (7.0 / 8.0) * cycle);
+            .connect_wire(wires.wire5, (1.0 / 8.0) * cycle)
+            .connect_wire(wires.wire4, (2.0 / 8.0) * cycle)
+            .connect_wire(wires.wire8, (3.0 / 8.0) * cycle)
+            .connect_wire(wires.wire6, (4.0 / 8.0) * cycle)
+            .connect_wire(wires.wire3, (5.0 / 8.0) * cycle)
+            .connect_wire(wires.wire7, (6.0 / 8.0) * cycle)
+            .connect_wire(wires.wire2, (7.0 / 8.0) * cycle);
 }
 
 private node wires {
