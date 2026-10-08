@@ -17,7 +17,7 @@ init:
 # Add the selected file, commit the changes, and push dev
 push:
 	git switch dev
-	git add "$(FILE)"
+	git add $(FILE)
 	git commit -m "Update"
 	git push -u origin dev
 
